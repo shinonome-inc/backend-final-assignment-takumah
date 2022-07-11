@@ -28,9 +28,6 @@ class HomeView(LoginRequiredMixin, TemplateView):
 class Login(LoginView):
     template_name = "accounts/login.html"
 
-    def get_success_url(self):
-        return reverse_lazy("accounts:home")
-
 
 class Logout(LogoutView):
     template_name = "base.html"
